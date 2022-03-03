@@ -55,7 +55,8 @@ function App() {
 
   const fetchSong = async (genre: string) => {
     try {
-      const requestUrl = `${process.env.REACT_APP_API_SERVER}/${genre}`;
+      // ${process.env.REACT_APP_API_SERVER}
+      const requestUrl = `/${genre}`;
       const songResponse = await axios.get(requestUrl);
       const songData : ISongData = songResponse.data
       setSongGenre(songData.genre)
