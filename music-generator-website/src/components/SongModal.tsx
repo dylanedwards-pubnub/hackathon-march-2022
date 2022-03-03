@@ -10,13 +10,12 @@ type ISongModalProps = {
 };
 
 const SongModal = (props: ISongModalProps) => {
-    const [show, setShow] = useState(true);
-    const handleClose = () => setShow(false);
+    const handleClose = () => props.setSongFetched(false);
 
   return (
     <div>
       {" "}
-      <Modal size="lg" centered show={show} onHide={handleClose}>
+      <Modal size="lg" centered show={props.songFetched} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Your Generated {props.genre} Song</Modal.Title>
         </Modal.Header>

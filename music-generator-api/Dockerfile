@@ -7,5 +7,6 @@ RUN python3 -m venv ./venv
 
 COPY . .
 RUN pip install -r ./requirements.txt
-    
+
+EXPOSE 5000
 CMD [ "python", "main.py" ]
