@@ -59,12 +59,14 @@ const ButtonRow = styled.div`
   padding: 6px;
 `;
 
+
 function App() {
   const [songFetched, setSongFetched] = useState(false);
   const [songGenre, setSongGenre] = useState("");
   const [genreRequested, setGenreRequested] = useState("country");
   const [loading, setLoading] = useState(false);
   const [song, setSong] = useState("");
+
 
   const fetchSong = async (genre: string) => {
     try {
